@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Day Planner</title>
+<title>Day Planner Game</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +15,7 @@
 <header>
   <div>
     <h2>🌅 Day Planner</h2>
-    <p>Make every hour count.</p>
+    <p>Make choices. Shape your day.</p>
   </div>
 
   <nav>
@@ -29,109 +29,66 @@
 
   <h1>
     One day.<br>
-    <span>A hundred</span> tiny choices.
+    <span>Every choice matters</span>
   </h1>
 
   <p>
-    Step through morning, school, afternoon, and night.
-    Every click changes your Stress, Energy, and Grades.
+    Your decisions affect Stress, Energy, and Grades.
+    Try to reach a good ending.
   </p>
 
   <div class="buttons">
-    <button class="primary-btn" onclick="startGame()">
-      Start your day →
-    </button>
+    <button class="primary-btn" onclick="startGame()">Start Game</button>
+  </div>
 
-    <button class="secondary-btn" onclick="showInfo()">
-      How it works
-    </button>
+  <div class="buttons">
+    <button onclick="choose('study')">Study</button>
+    <button onclick="choose('relax')">Relax</button>
+    <button onclick="choose('game')">Play Games</button>
   </div>
 
   <div class="stats">
-
     <div class="card">
-      <div class="bar red"></div>
       <h3>Stress</h3>
-      <p>Lower is healthier</p>
+      <p id="stress">50</p>
     </div>
 
     <div class="card">
-      <div class="bar green"></div>
       <h3>Energy</h3>
-      <p>Fuel for the day</p>
+      <p id="energy">50</p>
     </div>
 
     <div class="card">
-      <div class="bar blue"></div>
       <h3>Grades</h3>
-      <p>Long-term outcomes</p>
+      <p id="grades">50</p>
     </div>
-
   </div>
 
   <div id="game-output"></div>
 
 </section>
 
-<section class="phases" id="how">
-  <div class="phase-card"><h3>Morning</h3><p>07:00</p><p>Wake up choices and routines.</p></div>
-  <div class="phase-card"><h3>At School</h3><p>10:30</p><p>Study, friends, and focus.</p></div>
-  <div class="phase-card"><h3>Afternoon</h3><p>15:45</p><p>Activities and free time.</p></div>
-  <div class="phase-card"><h3>Night</h3><p>22:30</p><p>Sleep and final decisions.</p></div>
-</section>
-
 <section class="endings" id="endings">
-  <h2>Five possible endings</h2>
+
+  <h2>Possible Endings</h2>
 
   <div class="ending-grid">
     <div class="ending">🌿 Balanced</div>
     <div class="ending">🥵 Burnout</div>
     <div class="ending">🌀 Unproductive</div>
-    <div class="ending">🤝 Social</div>
-    <div class="ending">🌤️ Ordinary</div>
+    <div class="ending">🎓 Academic</div>
+    <div class="ending">😴 Exhausted</div>
   </div>
+
 </section>
 
 <footer id="about">
-  <p>Day Planner is a simple interactive game about how daily choices shape your future.</p>
+  <p>Simple choice-based day simulation game.</p>
 </footer>
 
 </div>
 
-<script>
-let stress = 50;
-let energy = 50;
-let grades = 50;
-
-function startGame(){
-  const events = [
-    "You woke up early and felt productive.",
-    "You skipped breakfast and lost energy.",
-    "You studied hard and improved your grades.",
-    "You spent time with friends and reduced stress.",
-    "You stayed up too late gaming."
-  ];
-
-  const randomEvent = events[Math.floor(Math.random() * events.length)];
-
-  document.getElementById("game-output").style.display = "block";
-
-  document.getElementById("game-output").innerHTML = `
-    <h2>Your Day Started!</h2>
-    <p>${randomEvent}</p>
-    <br>
-    <p>
-      Stress: ${Math.floor(Math.random()*100)}<br>
-      Energy: ${Math.floor(Math.random()*100)}<br>
-      Grades: ${Math.floor(Math.random()*100)}
-    </p>
-  `;
-}
-
-function showInfo(){
-  alert("Make choices throughout the day. Your stats change depending on your actions.");
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
