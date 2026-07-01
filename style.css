@@ -1,168 +1,35 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/styles-uQ6cLMjV.css" data-precedence="default"/><title>Day Planner — A Choose-Your-Day Web Experience</title><meta name="author" content="Lovable"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@Lovable"/><meta name="twitter:title" content="Smart choices"/><meta name="twitter:description" content="Your Daily Compass is a web application that simulates daily life choices and their impact on personal well-being."/><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/deb23688-a374-4415-9998-cfb25a884589/id-preview-4673837d--6f25227b-aec6-4b2a-9b4c-aca570f4bb46.lovable.app-1781577400477.png"/><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/deb23688-a374-4415-9998-cfb25a884589/id-preview-4673837d--6f25227b-aec6-4b2a-9b4c-aca570f4bb46.lovable.app-1781577400477.png"/><meta name="description" content="Day Planner is an interactive website where every choice from morning to night shapes your Stress, Energy, and Grades. Play, replay, and discover your ending."/><meta property="og:title" content="Day Planner — Make every hour count"/><meta property="og:description" content="An interactive day-in-the-life website. Make choices, trigger random events, and balance Stress, Energy &amp; Grades."/><link rel="modulepreload" href="/assets/index-DFILYaSV.js"/><link rel="modulepreload" href="/assets/routes-Cxob0PsR.js"/>
-<style>
-	@font-face {
-		font-family: 'CameraPlainVariable';
-		src: url('https://cdn.gpteng.co/mcp-widgets/v1/fonts/CameraPlainVariable.woff2') format('woff2');
-		font-weight: 100 900;
-		font-style: normal;
-		font-display: swap;
-	}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-	#lovable-badge {
-		--badge-bg: #1b1b1b;
-		--badge-text: #c5c1b9;
-		--badge-text-hover: #dcdad5;
-		--badge-radius: 6px;
-		--badge-padding: 8px;
-		--badge-gap: 6px;
-		--badge-shadow: 
-			0 0 0 1px rgba(0, 0, 0, 0.88),
-			0 1px 0 0 rgba(0, 0, 0, 0.04),
-			0 2px 2px -1px rgba(0, 0, 0, 0.08),
-			0 4px 4px -2px rgba(0, 0, 0, 0.08),
-			0 8px 8px -4px rgba(0, 0, 0, 0.08),
-			0 16px 16px -8px rgba(0, 0, 0, 0.08);
-		--badge-transition-duration: 0.2s;
-		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
-		--focus-color: #575ECF;
-		--focus-offset: 2px;
-		--focus-width: 2px;
-		
-		position: fixed;
-		bottom: 12px;
-		right: 12px;
-		height: 24px;
-		display: flex;
-		align-items: center;
-		z-index: 1000000;
-		background-color: var(--badge-bg) !important;
-		color: var(--badge-text) !important;
-		border-radius: var(--badge-radius);
-		box-shadow: var(--badge-shadow) !important;
-		font-size: 12px;
-		font-family: CameraPlainVariable, "CameraPlainVariable Fallback", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-		font-weight: 400 !important;
-		text-transform: none !important;
-		font-feature-settings: normal !important;
-		transform: translateZ(0);
-		will-change: transform, opacity;
-	}
+<link rel="stylesheet" href="/assets/styles-uQ6cLMjV.css" data-precedence="default"/>
 
-	#lovable-badge-cta {
-		display: flex;
-		align-items: center;
-		gap: var(--badge-gap);
-		padding: 0 var(--badge-padding);
-		height: 100%;
-		color: inherit;
-		text-decoration: none;
-		white-space: nowrap;
-		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
-		transition: 
-			background-color var(--badge-transition-duration) ease,
-			color var(--badge-transition-duration) ease,
-			transform 0.1s ease;
-	}
+<title>Day Planner — A Choose-Your-Day Web Experience</title>
 
-	#lovable-badge-cta:hover {
-		background: rgba(255, 255, 255, 0.04);
-		color: var(--badge-text-hover);
-	}
+<meta name="author" content="Lovable"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@Lovable"/>
+<meta name="twitter:title" content="Smart choices"/>
+<meta name="twitter:description" content="Your Daily Compass is a web application that simulates daily life choices and their impact on personal well-being."/>
 
-	#lovable-badge-cta:active {
-		transform: scale(0.98);
-	}
+<meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/deb23688-a374-4415-9998-cfb25a884589/id-preview-4673837d--6f25227b-aec6-4b2a-9b4c-aca570f4bb46.lovable.app-1781577400477.png"/>
+<meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/deb23688-a374-4415-9998-cfb25a884589/id-preview-4673837d--6f25227b-aec6-4b2a-9b4c-aca570f4bb46.lovable.app-1781577400477.png"/>
 
-	#lovable-badge-cta:focus {
-		outline: none;
-	}
+<meta name="description" content="Day Planner is an interactive website where every choice from morning to night shapes your Stress, Energy, and Grades. Play, replay, and discover your ending."/>
 
-	#lovable-badge-cta:focus-visible {
-		outline: var(--focus-width) solid var(--focus-color);
-		outline-offset: var(--focus-offset);
-		z-index: 1;
-	}
+<meta property="og:title" content="Day Planner — Make every hour count"/>
+<meta property="og:description" content="An interactive day-in-the-life website. Make choices, trigger random events, and balance Stress, Energy & Grades."/>
 
-	#lovable-badge-text {
-		line-height: 1;
-	}
+<link rel="modulepreload" href="/assets/index-DFILYaSV.js"/>
+<link rel="modulepreload" href="/assets/routes-Cxob0PsR.js"/>
 
-	#lovable-badge-divider {
-		width: 1px;
-		height: 24px;
-		background-color: rgba(255, 255, 255, 0.04);
-		flex-shrink: 0;
-	}
+</head>
 
-	#lovable-badge-close {
-		width: 24px;
-		height: 24px;
-		min-width: 24px;
-		min-height: 24px;
-		cursor: pointer;
-		background: none;
-		border: none;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
-		flex-shrink: 0;
-		transition: 
-			background-color var(--badge-transition-duration) ease,
-			transform 0.1s ease;
-	}
-
-	#lovable-badge-close:hover {
-		background: rgba(255, 255, 255, 0.04);
-	}
-
-	#lovable-badge-close:active {
-		transform: scale(0.92);
-	}
-
-	#lovable-badge-close:focus {
-		outline: none;
-	}
-
-	#lovable-badge-close:focus-visible {
-		outline: var(--focus-width) solid var(--focus-color);
-		outline-offset: calc(var(--focus-offset) * -1);
-		z-index: 1;
-	}
-
-	#lovable-badge-close svg path {
-		fill: var(--badge-text);
-		transition: fill var(--badge-transition-duration) ease;
-	}
-
-	#lovable-badge-close:hover svg path {
-		fill: var(--badge-text-hover);
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		#lovable-badge-cta,
-		#lovable-badge-close,
-		#lovable-badge-close svg path {
-			transition: none;
-		}
-		
-		#lovable-badge-cta:active,
-		#lovable-badge-close:active {
-			transform: none;
-		}
-	}
-
-	@media (prefers-contrast: high) {
-		#lovable-badge {
-			--badge-bg: #000;
-			--badge-text: #fff;
-			--badge-text-hover: #fff;
-			border: 2px solid currentColor;
-		}
-		
-		#lovable-badge-cta:focus-visible,
-		#lovable-badge-close:focus-visible {
-			outline-width: 3px;
-		}
-	}
+<body>
+</body>
+</html>
+```
