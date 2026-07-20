@@ -1,1 +1,59 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Day Planner</title> <link rel="stylesheet" href="style.css"/> </head> <body> <div class="background-overlay"></div> <header class="topbar"> <h1>DAY PLANNER</h1> <div class="stats"> <div class="stat"> <span>Stress</span> <div class="bar"> <div class="fill stress-fill"></div> </div> </div> <div class="stat"> <span>Energy</span> <div class="bar"> <div class="fill energy-fill"></div> </div> </div> <div class="stat"> <span>Grades</span> <div class="bar"> <div class="fill grades-fill"></div> </div> </div> </div> </header> <main class="game-container"> <section class="scene-card"> <div class="time-label"> 🌅 Morning </div> <div class="character-area"> <div class="character-face">😴</div> </div> <div class="dialogue-box"> <p> Your alarm rings loudly. You feel tired, but today could become something great... </p> </div> <div class="choices"> <button class="choice-btn"> 🛏 Sleep In </button> <button class="choice-btn"> ⏰ Wake Up Early </button> <button class="choice-btn"> 🍳 Eat Breakfast </button> <button class="choice-btn"> 📱 Check Phone First </button> <button class="choice-btn"> 🏃 Exercise Before School </button> </div> </section> <section class="event-popup"> <div class="event-header"> ⚠ RANDOM EVENT </div> <h2>Surprise Test!</h2> <p> Your teacher announces a surprise test at the start of class. </p> <div class="event-buttons"> <button>📚 Study Quickly</button> <button>😰 Panic</button> <button>🙈 Ignore It</button> </div> </section> </main> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="topbar">
+        <h1>📚 Your Day</h1>
+        <div class="stats">
+            <div class="stat">
+                <span>Stress</span>
+                <div class="bar">
+                    <div class="fill stress-fill" id="stressBar"></div>
+                </div>
+                <div class="stat-value" id="stressValue">50%</div>
+            </div>
+            <div class="stat">
+                <span>Energy</span>
+                <div class="bar">
+                    <div class="fill energy-fill" id="energyBar"></div>
+                </div>
+                <div class="stat-value" id="energyValue">75%</div>
+            </div>
+            <div class="stat">
+                <span>Grades</span>
+                <div class="bar">
+                    <div class="fill grades-fill" id="gradesBar"></div>
+                </div>
+                <div class="stat-value" id="gradesValue">70%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="scene-card" id="sceneCard">
+            <div class="time-label" id="timeLabel">Morning (7:00 AM)</div>
+            <div class="character-area">
+                <div class="character-face" id="characterFace">😴</div>
+            </div>
+            <div class="dialogue-box" id="dialogue">Your alarm goes off. Time to get up for school...</div>
+            <div class="choices" id="choices"></div>
+        </div>
+
+        <div id="eventPopup" class="event-popup" style="display:none;">
+            <div class="event-header" id="eventHeader">⚡ Random Event!</div>
+            <h2 id="eventTitle"></h2>
+            <p id="eventDescription"></p>
+            <div class="event-buttons" id="eventButtons"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
