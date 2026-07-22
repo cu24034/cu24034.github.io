@@ -1,59 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Day Planner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Matters</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
 
-    <div class="topbar">
-        <h1>📚 Your Day</h1>
-        <div class="stats">
-            <div class="stat">
-                <span>Stress</span>
-                <div class="bar">
-                    <div class="fill stress-fill" id="stressBar"></div>
-                </div>
-                <div class="stat-value" id="stressValue">50%</div>
-            </div>
-            <div class="stat">
-                <span>Energy</span>
-                <div class="bar">
-                    <div class="fill energy-fill" id="energyBar"></div>
-                </div>
-                <div class="stat-value" id="energyValue">75%</div>
-            </div>
-            <div class="stat">
-                <span>Grades</span>
-                <div class="bar">
-                    <div class="fill grades-fill" id="gradesBar"></div>
-                </div>
-                <div class="stat-value" id="gradesValue">70%</div>
-            </div>
-        </div>
+<header>
+    <h1>Sleep Matters</h1>
+    <p>Discover how getting enough sleep improves your grades, lowers stress, and boosts your energy.</p>
+    <a href="#learn" class="btn">Learn More</a>
+</header>
+
+<section id="learn" class="cards">
+
+    <div class="card">
+        <div class="icon">📚</div>
+        <h2>Better Grades</h2>
+        <p>
+            Sleep helps your brain remember what you learn during the day.
+            Students who get around 8 to 10 hours of sleep usually have better
+            concentration, memory, and problem-solving skills. Being well-rested
+            also helps you stay focused during lessons and tests.
+        </p>
     </div>
 
-    <div class="game-container">
-        <div class="scene-card" id="sceneCard">
-            <div class="time-label" id="timeLabel">Morning (7:00 AM)</div>
-            <div class="character-area">
-                <div class="character-face" id="characterFace">😴</div>
-            </div>
-            <div class="dialogue-box" id="dialogue">Your alarm goes off. Time to get up for school...</div>
-            <div class="choices" id="choices"></div>
-        </div>
-
-        <div id="eventPopup" class="event-popup" style="display:none;">
-            <div class="event-header" id="eventHeader">⚡ Random Event!</div>
-            <h2 id="eventTitle"></h2>
-            <p id="eventDescription"></p>
-            <div class="event-buttons" id="eventButtons"></div>
-        </div>
+    <div class="card">
+        <div class="icon">😌</div>
+        <h2>Less Stress</h2>
+        <p>
+            Getting enough sleep helps regulate emotions and reduces feelings of
+            stress and anxiety. When you are tired, small problems can feel much
+            bigger. Good sleep helps you stay calm and make better decisions.
+        </p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="card">
+        <div class="icon">⚡</div>
+        <h2>More Energy</h2>
+        <p>
+            Your body repairs itself while you sleep. A full night's rest gives
+            you more energy for school, sports, and hobbies. It also improves
+            reaction time and helps you stay active throughout the day.
+        </p>
+    </div>
+
+</section>
+
+<section class="facts">
+    <h2>Why Teenagers Need Sleep</h2>
+
+    <div class="fact-box">
+        <h3>Brain Development</h3>
+        <p>Your brain is still growing during your teenage years. Sleep supports learning, memory, and healthy brain development.</p>
+    </div>
+
+    <div class="fact-box">
+        <h3>Physical Health</h3>
+        <p>Sleep helps muscles recover, strengthens your immune system, and supports healthy growth.</p>
+    </div>
+
+    <div class="fact-box">
+        <h3>Mental Wellbeing</h3>
+        <p>Students who regularly get enough sleep often report better moods and are able to cope with challenges more effectively.</p>
+    </div>
+
+</section>
+
+<section class="tips">
+
+    <h2>Tips for Better Sleep</h2>
+
+    <ul>
+        <li>Go to bed at the same time every night.</li>
+        <li>Avoid phones and computers for at least 30 minutes before bed.</li>
+        <li>Keep your bedroom cool, dark, and quiet.</li>
+        <li>Limit energy drinks and caffeine in the evening.</li>
+        <li>Aim for 8 to 10 hours of sleep each night.</li>
+    </ul>
+
+</section>
+
+<footer>
+    <p>Sleep Matters | Healthy Sleep = Better Grades, Lower Stress & More Energy</p>
+</footer>
+
 </body>
 </html>
